@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .section {
+    @apply py-12 md:py-20;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-12;
+  }
+
+  .card {
+    @apply rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark focus:ring-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+  }
+
+  .nav-link {
+    @apply text-foreground-muted hover:text-primary transition-colors duration-200;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm
+           focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none
+           disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-primary/10 text-primary;
+  }
+
+  .badge-secondary {
+    @apply bg-secondary/10 text-secondary;
+  }
+
+  .badge-accent {
+    @apply bg-accent/10 text-accent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+}
+
